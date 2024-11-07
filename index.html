@@ -51,24 +51,26 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            flex-wrap: wrap;
         }
 
-      /* Estilos para a parte esquerda do login */
-.login-left {
-    width: 30vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
+        /* Estilos para a parte esquerda do login */
+        .login-left {
+            width: 30vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
 
-/* Tornar a imagem responsiva */
-.login-left img {
-    width: 100%;       /* A imagem vai ocupar 100% da largura do container */
-    height: auto;      /* A altura vai se ajustar automaticamente para manter a proporção */
-    max-width: 400px;  /* Limita o tamanho máximo da imagem */
-}
+        /* Tornar a imagem responsiva */
+        .login-left img {
+            width: 100%;       /* A imagem vai ocupar 100% da largura do container */
+            height: auto;      /* A altura vai se ajustar automaticamente para manter a proporção */
+            max-width: 400px;  /* Limita o tamanho máximo da imagem */
+        }
+
         .login-left > h1 {
             color: #ffffff;
             font-size: clamp(1.5rem, 4vw + 1rem, 3rem);
@@ -153,6 +155,25 @@
         }
 
         /* Responsividade */
+        @media (max-width: 1024px) {
+            .login-left {
+                width: 40vw; /* Ajuste da largura da parte esquerda em telas médias */
+            }
+
+            .right-login {
+                width: 60vw; /* Ajuste da largura da parte direita em telas médias */
+            }
+
+            .bar-navigation a {
+                margin: 5px 0;
+                font-size: 20px;
+            }
+
+            .login-left > h1 {
+                font-size: clamp(1.2rem, 4vw + 1rem, 2.5rem);
+            }
+        }
+
         @media (max-width: 768px) {
             .bar-navigation {
                 flex-direction: column;
@@ -164,8 +185,37 @@
                 font-size: 40px;
             }
 
-            .login-left > h1 {
-                font-size: clamp(1.2rem, 4vw + 1rem, 2.5rem);
+            .main-login {
+                padding-top: 80px;
+                flex-direction: column; /* Ajuste para coluna em dispositivos móveis */
+            }
+
+            .login-left {
+                width: 80vw; /* Maior largura para a parte esquerda em telas menores */
+                margin-bottom: 20px;
+            }
+
+            .right-login {
+                width: 80vw; /* Maior largura para a parte direita em telas menores */
+                margin-bottom: 20px;
+            }
+
+            .card-login {
+                width: 100%;
+                padding: 20px;
+            }
+
+            .card-login > h1 {
+                font-size: 1.5rem; /* Ajuste do tamanho da fonte */
+                text-align: center;
+            }
+
+            .textfield > input {
+                font-size: 10pt; /* Ajuste do tamanho da fonte nos inputs */
+            }
+
+            .textfield > label {
+                font-size: 12pt; /* Ajuste do tamanho da fonte do label */
             }
         }
     </style>
