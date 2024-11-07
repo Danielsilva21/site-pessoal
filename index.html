@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Daniel | Web Developer</title>
+
+    <!-- Link para Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        /* Barra de navegação fixa no topo */
+        .bar-navigation {
+            width: 100%;
+            background-color: #32096b;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        .bar-navigation a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 25px;
+            display: flex;
+            align-items: center;
+        }
+
+        .bar-navigation a i {
+            margin-right: 2px;
+        }
+
+        .bar-navigation a:hover {
+            color: #ddd;
+        }
+
+        .main-login {
+            padding-top: 60px;
+            width: 100vw;
+            height: 100vh;
+            background: #210c52;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+      /* Estilos para a parte esquerda do login */
+.login-left {
+    width: 30vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Tornar a imagem responsiva */
+.login-left img {
+    width: 100%;       /* A imagem vai ocupar 100% da largura do container */
+    height: auto;      /* A altura vai se ajustar automaticamente para manter a proporção */
+    max-width: 400px;  /* Limita o tamanho máximo da imagem */
+}
+        .login-left > h1 {
+            color: #ffffff;
+            font-size: clamp(1.5rem, 4vw + 1rem, 3rem);
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 5%;
+            max-width: 100%;
+        }
+
+        /* Estilos para a parte direita do login */
+        .right-login {
+            width: 50vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card-login {
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 30px 35px;
+            background: #1e0b50;
+            border-radius: 10px;
+            box-shadow: 0px 10px 40px;
+            color: #00000056;
+        }
+
+        .card-login > h1 {
+            color: #ae00ff;
+            font-weight: 800;
+            margin: 0;
+        }
+
+        .textfield {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            margin: 10px 0px;
+        }
+
+        .textfield > input {
+            width: 100%;
+            border: none;
+            border-radius: 8px;
+            padding: 8px;
+            background: #514869;
+            color: #f0ffffde;
+            font-size: 12pt;
+            box-shadow: 0px 10px 40px #a81be056;
+            outline: none;
+        }
+
+        .textfield > label {
+            color: #f0ffffde;
+            margin-bottom: 8px;
+        }
+
+        .textfield > input::placeholder {
+            color: #f0ffff94;
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 16px 0px;
+            margin: 25px;
+            border: none;
+            border-radius: 8px;
+            outline: none;
+            text-transform: uppercase;
+            font-weight: 800;
+            letter-spacing: 3px;
+            color: #2b134b;
+            cursor: pointer;
+            box-shadow: 0px 10px 40px -12px #7404b452;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .bar-navigation {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .bar-navigation a {
+                margin: 10px 0;
+                font-size: 40px;
+            }
+
+            .login-left > h1 {
+                font-size: clamp(1.2rem, 4vw + 1rem, 2.5rem);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de navegação fixa com ícones sociais -->
+    <div class="bar-navigation">
+        <a href="https://www.instagram.com/daniel21p_/" target="_blank"></a> Daniel | Web Developer
+        <a href="https://www.instagram.com/daniel21p_/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://github.com/Danielsilva21" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/gileade-daniel-a45509267/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+
+    <!-- Conteúdo do login -->
+    <div class="main-login">
+        <div class="login-left">
+            <h1>Precisando de um Site para o Seu Negócio?</h1>
+            <img src="astronauta.svg" alt="astronauta animação">
+        </div>
+        <div class="right-login">
+            <div class="card-login">
+                <h1>Primeiro passo para o Seu Negócio</h1>
+                <div class="textfield">
+                    <label for="usuario">Seu Nome</label>      
+                    <input type="text" name="usuario" placeholder="Seu Nome Completo">
+                </div>
+                <div class="textfield">
+                    <label for="Senha">Nome da Sua Empresa</label>      
+                    <input type="text" name="empresa" placeholder="Nome da Sua Empresa">
+                </div>
+                <div class="textfield">
+                    <label for="Senha">Digite o CNPJ</label>      
+                    <input type="text" name="empresa" placeholder="XX. XXX. XXX/0001-XX">
+                </div>
+                <div class="textfield">
+                    <label for="usuario">Sua Idade</label>      
+                    <input type="date" name="idade" >
+                </div>
+                <div class="textfield">
+                    <label for="Senha">Seu Telefone</label>      
+                    <input type="numb" name="Telefone" placeholder=" (81) 99999-9999"  pattern="\(\d{2}\)\s\d{4,5}-\d{4}" title="Formato válido: (XX) XXXX-XXXX ou (XX) XXXXX-XXXX">
+                </div>
+                <div class="textfield">
+                    <label for="Senha">Seu Email</label>      
+                    <input type="text" name="email" placeholder="Digite Seu melhor Email">
+                </div>
+                <a href="https://wa.link/cd23bx" target="_blank">
+                    <button class="btn-login">Fale comigo</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
